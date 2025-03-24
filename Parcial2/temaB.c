@@ -37,3 +37,14 @@ int main(void) {
 
     return 0;
 }
+
+/* EJERCICIO 3 (LOS EJEMPLOS/EJECUCIONES)
+Ingrese 5 valores enteros: 4 3 6 5 8
+Ingrese un entero positivo: 3
+La suma de los últimos 3 elementos es 19
+
+
+Ingrese 5 valores enteros: 1 1 6 3 7
+Ingrese un entero positivo: 5
+La suma de los últimos 5 elementos es 18
+*/
