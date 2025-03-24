@@ -25,6 +25,11 @@ esDelDirector (Pelicula _ d _ _) d' | (d == d') = True
                                     | otherwise = False
 esDelDirector _ d' = False
 
+{- COMO LO HACEN LOS PROFES:
+esDelDirector ::Video -> String -> Bool
+esDelDirector (CapSerie a y c d) b = False
+esDelDirector (Pelicula a y c d) b = y == b -}
+
 {- ejemplo:
 *Main> esDelDirector (Pelicula "peli1" "dire" 123 1990) "dire"
 True -}
@@ -34,6 +39,11 @@ esActual :: Video -> Bool
 esActual (CapSerie  _ _ _ a) | (a >= 2020) = True
                              | otherwise = False
 esActual _ = False
+
+{- COMO LO HACEN LOS PROFES:
+esActual :: Video -> Bool
+esActual (CapSerie a b c d) =  d >= 2020
+esActual (Pelicula a y c d) = False -}
 
 {- ejemplos:
 *Main> esActual (CapSerie "n" 5 5 2023)
@@ -49,6 +59,13 @@ tiempoPelis [] a' = 0
 tiempoPelis ((Pelicula _ _ d a):ls) a' | (a == a') = d + tiempoPelis ls a'
                                        | otherwise = tiempoPelis ls a'
 tiempoPelis (_:ls) a' = tiempoPelis ls a'
+
+{- COMO LO HACEN LOS PROFES:
+tiempoPelis :: [Video] -> Int -> Int
+tiempoPelis [] x = 0
+tiempoPelis ((Pelicula a b c d):xs) x | x==d = c + tiempoPelis xs x 
+                                      | otherwise = tiempoPelis xs x
+tiempoPelis ((CapSerie a b c d):xs) x = tiempoPelis xs x -}
 
 {- ejemplo: 
 *Main> tiempoPelis [(Pelicula "a" "b" 123 2000), (Pelicula "b" "c" 100 2000), (CapSerie "d" 2 4 2000)] 2000
