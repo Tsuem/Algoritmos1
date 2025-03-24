@@ -1,8 +1,3 @@
-{- 
-Algoritmos y Estructuras de datos I
-Nombre: Tsue Ivonne Motosono Pereda
-Comisión: 3 -}
-
 -- ************ EJERCICIO 1 ************
 -- 1a
 esCero :: Int -> Bool
