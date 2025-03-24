@@ -7,7 +7,6 @@ struct par{
   int snd;
 };
 
-
 void imprime_par( struct par p){
 /* Leo los campos  */
   printf(" El par es  fst=%d y snd= %d\n",p.fst, p.snd); 
@@ -20,7 +19,6 @@ struct par inventa_par(void){
   res.snd = 44;
   return res;
 }
-
 
 int main(void) {
 /* Declaro la variable del tipo Struct */
@@ -36,3 +34,15 @@ int main(void) {
 
   return 0;
 }
+
+// OTRA FORMA DE USAR STRUCT CON TYPEDEF
+/* typedef struct {
+  int fst;
+  int snd;
+} par;
+
+int main (void) {
+  par dupla;
+  dupla.fst=3;
+  ...;
+} */

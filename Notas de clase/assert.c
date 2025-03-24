@@ -3,6 +3,7 @@
 #include <stdbool.h>
 
 // ********* *FUNCION QUE PIDE BOOLEANO Y HACE USO DEL ASSERT **********
+// SE ASEGURA QUE ENTRE UN 0 O 1 PARA QUE FUNCIONE LA FUNCION
 bool pedirBooleano (void){
     int temp = 2;
 
