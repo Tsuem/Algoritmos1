@@ -1,8 +1,8 @@
-#include <stdio.h>
+/* #include <stdio.h>
+#include <assert.h> */
 #include <stdbool.h>
-#include <assert.h>
 
-// FUNCION QUE PIDE BOOLEANO
+// ********* *FUNCION QUE PIDE BOOLEANO Y HACE USO DEL ASSERT **********
 bool pedirBooleano (void){
     int temp = 2;
 
@@ -16,7 +16,7 @@ bool pedirBooleano (void){
 }
 
 
-// FUNCION QUE IMPRIME BOOLEANO
+// ********* FUNCION QUE IMPRIME BOOLEANO Y HACE USO DEL ASSERT *********
 void imprimeBooleano(bool x){
     assert (x==1 || x == 0);
 
