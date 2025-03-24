@@ -1,0 +1,21 @@
+{- NOTAS DE CLASE DEL LENGUAJE HASKELL -}
+POLIMORFISMO PARAMÉTRICO --> no se sabe el tipo 
+ej: id :: a -> a
+puede tener tipo:   Char -> Char,   Bool -> Bool,    (Bool -> Bool) -> (Bool -> Bool)
+
+POLIMORFISMO ADHOC --> limita al tipo con una clase de tipo ej: Ord, Eq, Enum, Bounded, Num, Integral, Floating
+ej: Ord a => [a]
+**tipo de polimorfismo que determina ciertas características a a
+
+con la instruccion :i Bool (o :i Char, etc) podemos ver que clases de tipos soportan esos tipos de variables
+Bool soporta Eq, Ord, Enum, Show, Read, Bounded
+
+
+CURRIFICACIÓN --> nos permite la aplicacion parcial
+
+APLICACIÓN PARCIAL --> es la aplicacion de una funcion con menos parámetros
+
+1. abrir consola
+2. para empezar, hacer un ghci en la terminal
+3. abrir el archivo con :l nombreDelArchivo
+4. para guardar :r
